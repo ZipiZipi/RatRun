@@ -5,11 +5,11 @@ using UnityEngine;
 public class PipeManager : MonoBehaviour
 {
     [SerializeField] private FloatingJoystick _joystick;
-    [SerializeField] private float _moveSpeed;
+    private float _moveSpeed;
     // Start is called before the first frame update
     void Start()
     {
-
+        _moveSpeed = LevelGenerator.gameSpeed;
     }
     // Update is called once per frame
     void Update()
