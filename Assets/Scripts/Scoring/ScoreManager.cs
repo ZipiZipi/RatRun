@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager instance;
+    public static ScoreManager Instance;
 
     public float scoreCount;
+
     public TMP_Text scoreText;
     private void Awake()
     {
-        instance = this;
+        Instance = this;
     }
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class ScoreManager : MonoBehaviour
     {
         while (true)
         {
-            scoreCount += 2*LevelGenerator.gameSpeed;
+            scoreCount += 2;
             scoreText.text = "Distance: " + scoreCount.ToString();
         }
     }

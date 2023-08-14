@@ -6,7 +6,9 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
     public List<GameObject> pipes;
+
     public bool spawnPipe;
+
     public static float gameSpeed;
     // Start is called before the first frame update
     void Start()

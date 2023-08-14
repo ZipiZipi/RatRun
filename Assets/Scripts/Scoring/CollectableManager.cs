@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class CollectableManager : MonoBehaviour
 {
-    public static CollectableManager instance;
+    public static CollectableManager Instance;
 
     public int coinCount;
 
     public TMP_Text coinText;
     private void Awake()
     {
-        instance = this;
+        Instance = this;
     }
     // Start is called before the first frame update
     void Start()
