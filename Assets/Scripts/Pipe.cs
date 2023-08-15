@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pipe : MonoBehaviour
 {
-    [SerializeField] private FloatingJoystick _joystick;
+
     private float _moveSpeed;
     private bool _isExsisting;
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class Pipe : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - _moveSpeed * Time.deltaTime);
-        transform.Rotate(0, _joystick.Horizontal * (_moveSpeed/2), 0);
+        transform.Rotate(0, InputManager.Instance.Joystick.Horizontal * (_moveSpeed/10), 0);
         if(gameObject.transform.position.z < -14)
         {
             _isExsisting = false;

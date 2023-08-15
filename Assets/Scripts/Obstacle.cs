@@ -5,11 +5,16 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     private int _playerLayer;
-    /*private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider player)
     {
-        other.GetComponent<Rigidbody>().useGravity = true;
-    }*/
-    private void Start()
+        if (player.gameObject.layer == _playerLayer)
+        {
+            Debug.Log("TRIGERRRRrr");
+            player.transform.SetParent(transform, false);
+            InputManager.Instance.Joystick.enabled = false;
+        }
+    }
+    private void Awake()
     {
         _playerLayer = LayerMask.NameToLayer("Player");
     }

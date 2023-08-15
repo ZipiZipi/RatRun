@@ -18,7 +18,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         scoreText.text = "Distance: " + scoreCount.ToString();
-        //StartCoroutine(DistanceCounter());
+        StartCoroutine(DistanceCounter());
     }
 
     // Update is called once per frame
@@ -26,8 +26,9 @@ public class ScoreManager : MonoBehaviour
     {
         while (true)
         {
-            scoreCount += 2;
+            scoreCount += LevelGenerator.gameSpeed;
             scoreText.text = "Distance: " + scoreCount.ToString();
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

@@ -966,6 +966,7 @@ GameObject:
   - component: {fileID: 1360718020}
   - component: {fileID: 1360718019}
   - component: {fileID: 1360718021}
+  - component: {fileID: 1360718022}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1016,6 +1017,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreCount: 0
   scoreText: {fileID: 1602279056}
+--- !u!114 &1360718022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360718018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93ef9fd96bbbe54438eae742d66d38b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _joystick: {fileID: 8170153793097776451}
 --- !u!1 &1425097989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,6 +1660,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 6101158213596215490}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8170153793097776451 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7813174759402107298, guid: f81ae3df5089ac141bc217cc65838911,
+    type: 3}
+  m_PrefabInstance: {fileID: 6101158213596215490}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a47f546fc70ec8428172694e78e4288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8923199488184808022
 PrefabInstance:
   m_ObjectHideFlags: 0

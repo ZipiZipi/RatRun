@@ -9,10 +9,11 @@ public class Hole : MonoBehaviour
     {
         if(other.gameObject.layer == _playerLayer)
         {
+            Debug.Log(other.name);
             other.GetComponent<Rigidbody>().useGravity = true;
         }
     }
-    private void Start()
+    private void Awake()
     {
         _playerLayer = LayerMask.NameToLayer("Player");
     }

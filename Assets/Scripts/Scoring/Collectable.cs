@@ -15,7 +15,7 @@ public class Collectable : MonoBehaviour
             this.gameObject.SetActive(false);
         }
     }
-    private void Start()
+    private void Awake()
     {
         _playerLayer = LayerMask.NameToLayer("Player");
     }

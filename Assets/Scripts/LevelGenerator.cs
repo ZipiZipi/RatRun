@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-    public List<GameObject> pipes;
+    public List<GameObject> pipes = new List<GameObject>();
 
     public bool spawnPipe;
     public static float gameSpeed;
@@ -30,12 +30,15 @@ public class LevelGenerator : MonoBehaviour
     }
     IEnumerator GeneratePipe()
     {
-        while(spawnPipe)
+        while(true)
         {
-            yield return new WaitForSeconds(1);
-            int rand = Random.Range(0, pipes.Count);
-            Instantiate(pipes[rand], new Vector3(0, 0, 41), Quaternion.AngleAxis(-90, Vector3.right));
-            spawnPipe = false;
+            if (spawnPipe)
+            {
+                int rand = Random.Range(0, pipes.Count);
+                Instantiate(pipes[rand], new Vector3(0, 0, 41), Quaternion.AngleAxis(-90, Vector3.right));
+                spawnPipe = false;
+            }
+            yield return null;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -43,6 +46,7 @@ public class LevelGenerator : MonoBehaviour
         if (other.CompareTag("Pipe")) // Adjust the tag based on your setup
         {
             spawnPipe=true;
+            other.gameObject.GetComponent<BoxCollider>().enabled = false;
         }
     }
 }
