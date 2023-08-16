@@ -14,8 +14,8 @@ public class LevelGenerator : MonoBehaviour
     {
         spawnPipe = true;
         gameSpeed = 5f;
-        int rand = Random.Range(0, pipes.Count);
-        Instantiate(pipes[rand], new Vector3(0, 0, 41), Quaternion.AngleAxis(-90, Vector3.right));
+        //int rand = Random.Range(0, pipes.Count);
+        //Instantiate(pipes[rand], new Vector3(0, 0, 41), Quaternion.Euler(new Vector3(Random.Range(0f, 360f), 90, -90)));
         StartCoroutine(GameSpeedUpdate());
         StartCoroutine(GeneratePipe());
     }
@@ -35,11 +35,12 @@ public class LevelGenerator : MonoBehaviour
             if (spawnPipe)
             {
                 int rand = Random.Range(0, pipes.Count);
-                Instantiate(pipes[rand], new Vector3(0, 0, 41), Quaternion.AngleAxis(-90, Vector3.right));
+                Instantiate(pipes[rand], new Vector3(0, 0, 41), Quaternion.Euler(new Vector3(Random.Range(0f, 360f), 90, -90)));
                 spawnPipe = false;
             }
             yield return null;
         }
+        
     }
     private void OnTriggerExit(Collider other)
     {

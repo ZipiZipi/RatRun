@@ -21,7 +21,7 @@ public class Pipe : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - _moveSpeed * Time.deltaTime);
-        transform.Rotate(0, InputManager.Instance.Joystick.Horizontal * (_moveSpeed/10), 0);
+        transform.Rotate(0, InputManager.Instance.Joystick.Horizontal * (_moveSpeed/6), 0);
         if(gameObject.transform.position.z < -14)
         {
             _isExsisting = false;

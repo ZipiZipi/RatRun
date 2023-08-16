@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour
         if (player.gameObject.layer == _playerLayer)
         {
             Debug.Log("TRIGERRRRrr");
-            player.transform.SetParent(transform, false);
+            player.transform.SetParent(transform, true);
             InputManager.Instance.Joystick.enabled = false;
         }
     }
