@@ -9,8 +9,8 @@ public class Obstacle : MonoBehaviour
     {
         if (player.gameObject.layer == _playerLayer)
         {
-            Debug.Log("TRIGERRRRrr");
-            player.transform.SetParent(transform, true);
+            Debug.Log(player.name + " hit an obsticle!");
+            player.transform.SetParent(this.transform.parent, true);
             InputManager.Instance.Joystick.enabled = false;
         }
     }

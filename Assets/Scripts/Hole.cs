@@ -9,7 +9,8 @@ public class Hole : MonoBehaviour
     {
         if(other.gameObject.layer == _playerLayer)
         {
-            Debug.Log(other.name);
+            Debug.Log(other.name +  " fell in hole.");
+            this.GetComponentInParent<MeshCollider>().enabled = true;
             other.GetComponent<Rigidbody>().useGravity = true;
         }
     }

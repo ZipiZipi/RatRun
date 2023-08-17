@@ -42,12 +42,13 @@ public class LevelGenerator : MonoBehaviour
         }
         
     }
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider pipe)
     {
-        if (other.CompareTag("Pipe")) // Adjust the tag based on your setup
+        if (pipe.CompareTag("Pipe")) // Adjust the tag based on your setup
         {
             spawnPipe=true;
-            other.gameObject.GetComponent<BoxCollider>().enabled = false;
+            pipe.gameObject.GetComponent<BoxCollider>().enabled = false;
+            pipe.gameObject.GetComponent<MeshCollider>().enabled = false;
         }
     }
 }
