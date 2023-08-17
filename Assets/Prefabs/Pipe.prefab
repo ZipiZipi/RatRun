@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 1777960234650810384}
   - component: {fileID: 2311612668520447132}
   - component: {fileID: -8026182071904330844}
-  - component: {fileID: 7234318779331205768}
   m_Layer: 7
   m_Name: Pipe
   m_TagString: Pipe
@@ -2501,27 +2500,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!65 &7234318779331205768
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791054753217656366}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 4, y: 7, z: 3.9392314}
-  m_Center: {x: 0, y: 0, z: -0.00000017881393}
 --- !u!1 &2061936806614088166
 GameObject:
   m_ObjectHideFlags: 0
@@ -2550,8 +2528,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061936806614088166}
   m_LocalRotation: {x: 0.6276756, y: -0.32561153, z: 0.32561186, w: 0.6276762}
-  m_LocalPosition: {x: -1.392, y: 1.686, z: 0.897}
-  m_LocalScale: {x: 3.4448817, y: 0.935108, z: 0.24822}
+  m_LocalPosition: {x: -1.051, y: 1.686, z: 0.657}
+  m_LocalScale: {x: 1.5897784, y: 0.70084476, z: 0.24822}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 847351255815730774}
@@ -2667,8 +2645,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8747704834062957821}
   m_LocalRotation: {x: 0.7071065, y: -0, z: -0, w: 0.7071071}
-  m_LocalPosition: {x: -0.066, y: -2.34, z: -1.367}
-  m_LocalScale: {x: 0.45016098, y: 0.27322605, z: 1.4924395}
+  m_LocalPosition: {x: 0.034, y: -2.34, z: -0.723}
+  m_LocalScale: {x: 0.34689724, y: 0.3979465, z: 1.4924395}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 847351255815730774}
@@ -2713,7 +2691,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.0143671
-  m_Height: 1
+  m_Radius: 0.6562499
+  m_Height: 0.9999999
   m_Direction: 2
-  m_Center: {x: 0.21259338, y: -0.71581274, z: 0}
+  m_Center: {x: -0.15072927, y: -2.267706, z: 0}

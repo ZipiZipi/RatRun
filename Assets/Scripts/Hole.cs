@@ -12,6 +12,7 @@ public class Hole : MonoBehaviour
             Debug.Log(other.name +  " fell in hole.");
             this.GetComponentInParent<MeshCollider>().enabled = true;
             other.GetComponent<Rigidbody>().useGravity = true;
+            LevelGenerator.isDead = true;
         }
     }
     private void Awake()

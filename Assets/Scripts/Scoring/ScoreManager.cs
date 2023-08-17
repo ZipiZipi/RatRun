@@ -24,7 +24,7 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     IEnumerator DistanceCounter()
     {
-        while (true)
+        while (!LevelGenerator.isDead)
         {
             scoreCount += LevelGenerator.gameSpeed;
             scoreText.text = "Distance: " + scoreCount.ToString();
