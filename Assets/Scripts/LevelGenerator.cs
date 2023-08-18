@@ -1,10 +1,22 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
+    [SerializeField]
+    public Canvas gameCanvas;
+    [SerializeField]
+    public Canvas DugmeCanvas;
+    [SerializeField]
+    public TMP_Text Score;
+    [SerializeField]
+    public TMP_Text Coins;
+
+    public static bool IsAlive;
+
     public static LevelGenerator Instance;
     public List<GameObject> pipes = new List<GameObject>();
 
@@ -13,7 +25,9 @@ public class LevelGenerator : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        DugmeCanvas.enabled = false;
         Instance = this;
+        IsAlive = true;
         gameSpeed = 5f;
     }
     void Start()
@@ -22,10 +36,19 @@ public class LevelGenerator : MonoBehaviour
         StartCoroutine(GeneratePipe());
         StartCoroutine(GameSpeedUpdate());
     }
-
+    private void Update()
+    {
+        if(!IsAlive)
+        {
+            gameCanvas.enabled = false;
+            DugmeCanvas.enabled = true;
+            Score.text = "Distance: " + ScoreManager.scoreCount.ToString();
+            Coins.text = "Distance: " + CollectableManager.coinCount.ToString();
+        }
+    }
     IEnumerator GameSpeedUpdate()
     {
-        while (true)
+        while (IsAlive)
         {
             yield return new WaitForSeconds(5);
             gameSpeed += 0.5f;
@@ -33,7 +56,7 @@ public class LevelGenerator : MonoBehaviour
     }
     IEnumerator GeneratePipe()
     {
-        while(true)
+        while(IsAlive)
         {
             if (spawnPipe)
             {

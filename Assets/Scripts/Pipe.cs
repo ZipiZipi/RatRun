@@ -8,11 +8,11 @@ public class Pipe : MonoBehaviour
     private InputManager _InputManager;
     private float _moveSpeed;
     private bool _isExsisting;
+    public LevelGenerator _LevelGenerator;
     // Start is called before the first frame update
     private void Awake()
     {
         _moveSpeed = LevelGenerator.gameSpeed;
-
     }
     void Start()
     {
@@ -23,7 +23,10 @@ public class Pipe : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - _moveSpeed * Time.deltaTime);
+        if (LevelGenerator.IsAlive)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - _moveSpeed * Time.deltaTime);
+        }
         if(gameObject.transform.position.z < -14)
         {
             _isExsisting = false;

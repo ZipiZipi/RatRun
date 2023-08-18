@@ -8,7 +8,7 @@ public class CollectableManager : MonoBehaviour
 {
     public static CollectableManager Instance;
 
-    public int coinCount;
+    public static int coinCount;
 
     public TMP_Text coinText;
     private void Awake()

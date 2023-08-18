@@ -7,7 +7,7 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
 
-    public float scoreCount;
+    public static float scoreCount;
 
     public TMP_Text scoreText;
     private void Awake()
@@ -24,7 +24,7 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     IEnumerator DistanceCounter()
     {
-        while (true)
+        while (LevelGenerator.IsAlive)
         {
             scoreCount += LevelGenerator.gameSpeed;
             scoreText.text = "Distance: " + scoreCount.ToString();
