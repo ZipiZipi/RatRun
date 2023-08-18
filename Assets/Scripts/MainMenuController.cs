@@ -1,10 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Unity.UI;
-using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
 {
