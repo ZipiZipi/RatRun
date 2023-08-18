@@ -11,7 +11,7 @@ public class LevelGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameSpeed = 1f;
+        gameSpeed = 5f;
         //int rand = Random.Range(0, pipes.Count);
         //Instantiate(pipes[rand], new Vector3(0, 0, 41), Quaternion.Euler(new Vector3(Random.Range(0f, 360f), 90, -90)));
         StartCoroutine(GameSpeedUpdate());
@@ -22,8 +22,8 @@ public class LevelGenerator : MonoBehaviour
     {
         while (!isDead)
         {
-            yield return new WaitForSeconds(3);
-            gameSpeed += 0.2f;
+            yield return new WaitForSeconds(4);
+            gameSpeed += 0.5f;
         }
         if (isDead)
         {
@@ -43,14 +43,13 @@ public class LevelGenerator : MonoBehaviour
             yield return null;
         }
         
-    }
-    private void OnTriggerExit(Collider pipe)
+    }*/
+    private void OnTriggerEnter(Collider pipe)
     {
         if (pipe.CompareTag("Pipe")) // Adjust the tag based on your setup
         {
-            spawnPipe=true;
-            pipe.gameObject.GetComponent<BoxCollider>().enabled = false;
-            pipe.gameObject.GetComponent<MeshCollider>().enabled = false;
+            Debug.Log("Pipe randomly rotated");
+            pipe.transform.rotation = Quaternion.Euler(new Vector3(Random.Range(0f, 360f), 90, -90));
         }
-    }*/
+    }
 }
