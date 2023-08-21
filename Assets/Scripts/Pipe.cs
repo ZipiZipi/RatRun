@@ -6,43 +6,31 @@ using UnityEngine;
 public class Pipe : MonoBehaviour
 {
     private InputManager _InputManager;
+    private LevelGenerator _LevelGenerator;
     private float _moveSpeed;
-    private bool _isExsisting;
-    public LevelGenerator _LevelGenerator;
-    // Start is called before the first frame update
-    private void Awake()
-    {
-        _moveSpeed = LevelGenerator.gameSpeed;
-    }
+    private float step;
+    Vector3 endPoint = new(0, 0, -14);
     void Start()
     {
-        _isExsisting = true;
+        _moveSpeed = LevelGenerator.gameSpeed;
         _InputManager = InputManager.Instance;
-        StartCoroutine(UpdateSpeed());
+        _LevelGenerator = LevelGenerator.Instance;
     }
-    // Update is called once per frame
+
     void FixedUpdate()
     {
+
         if (LevelGenerator.IsAlive)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - _moveSpeed * Time.deltaTime);
-        }
-        if(gameObject.transform.position.z < -14)
-        {
-            _isExsisting = false;
-            Destroy(gameObject);
-        }
-    }
-    void Update()
-    {
-        transform.Rotate(0, _InputManager.Joystick.Horizontal * (_moveSpeed / 5), 0);
-    }
-    IEnumerator UpdateSpeed()
-    {
-        while(_isExsisting)
-        {
-            yield return new WaitForEndOfFrame();
             _moveSpeed = LevelGenerator.gameSpeed;
+            transform.Rotate(0, _InputManager.Joystick.Horizontal * (_moveSpeed / 3), 0);
+            step = Time.fixedDeltaTime * _moveSpeed;
+            transform.position = Vector3.MoveTowards(transform.position, endPoint, step);
+            //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - _moveSpeed * Time.deltaTime);
+        }
+        if (gameObject.transform.position.z <= -14)
+        {
+            Destroy(gameObject);
         }
     }
 }

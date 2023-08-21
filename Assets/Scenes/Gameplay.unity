@@ -302,6 +302,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefaultPipe (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4421783614254438046, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 450369292}
+    - target: {fileID: 4421783614254438046, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5796937614293751895, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
         type: 3}
       propertyPath: m_Mesh
@@ -1450,6 +1460,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefaultPipe (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4421783614254438046, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1142021560}
+    - target: {fileID: 4421783614254438046, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5796937614293751895, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
         type: 3}
       propertyPath: m_Mesh
@@ -1463,7 +1483,7 @@ PrefabInstance:
     - target: {fileID: 7234318779331205768, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1542,6 +1562,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DefaultPipe (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421783614254438046, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1250700780}
+    - target: {fileID: 4421783614254438046, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5796937614293751895, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
         type: 3}
@@ -1635,6 +1665,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DefaultPipe (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421783614254438046, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1855343884}
+    - target: {fileID: 4421783614254438046, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5796937614293751895, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
         type: 3}
@@ -1942,9 +1982,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5995b78a460f7ef4f9abf4fc94bdc352, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.4
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2429,6 +2469,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefaultPipe (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4421783614254438046, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 716790462}
+    - target: {fileID: 4421783614254438046, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5796937614293751895, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
         type: 3}
       propertyPath: m_Mesh
@@ -2820,6 +2870,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DefaultPipe (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421783614254438046, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1346324412}
+    - target: {fileID: 4421783614254438046, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5796937614293751895, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
         type: 3}
@@ -3838,7 +3898,7 @@ PrefabInstance:
     - target: {fileID: 8178844812494501977, guid: 5698eae4cfec58e45827deea9bba3906,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.668
+      value: -1.67
       objectReference: {fileID: 0}
     - target: {fileID: 8178844812494501977, guid: 5698eae4cfec58e45827deea9bba3906,
         type: 3}
@@ -4113,7 +4173,7 @@ GameObject:
   m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &1916596903
 MonoBehaviour:
@@ -4131,6 +4191,7 @@ MonoBehaviour:
   DugmeCanvas: {fileID: 322572422}
   Score: {fileID: 969022217}
   Coins: {fileID: 427384549}
+  Instance: {fileID: 0}
   pipes:
   - {fileID: 1791054753217656366, guid: 6784d3cb9d9b0064d959fa4b45e89e11, type: 3}
   spawnPipe: 0
@@ -4242,6 +4303,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DefaultPipe (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421783614254438046, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1102319817}
+    - target: {fileID: 4421783614254438046, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5796937614293751895, guid: 51443fd7cdbac4e41a3fd1f57ee0f397,
         type: 3}

@@ -12,7 +12,7 @@ public class Obstacle : MonoBehaviour
             Debug.Log(player.name + " hit an obsticle!");
             player.transform.SetParent(this.transform.parent, true);
             LevelGenerator.IsAlive = false;
-            InputManager.Instance.Joystick.enabled = false;
+            player.GetComponent<Animator>().enabled = false;
         }
     }
     private void Awake()

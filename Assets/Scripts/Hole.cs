@@ -5,13 +5,14 @@ using UnityEngine;
 public class Hole : MonoBehaviour
 {
     private int _playerLayer;
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider player)
     {
-        if(other.gameObject.layer == _playerLayer)
+        if(player.gameObject.layer == _playerLayer)
         {
-            Debug.Log(other.name +  " fell in hole.");
+            Debug.Log(player.name +  " fell in hole.");
             this.GetComponentInParent<MeshCollider>().enabled = true;
-            other.GetComponent<Rigidbody>().useGravity = true;
+            player.GetComponent<Rigidbody>().useGravity = true;
+            player.GetComponent<Animator>().enabled = false;
             LevelGenerator.IsAlive = false;
         }
     }

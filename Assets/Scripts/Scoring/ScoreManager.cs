@@ -8,11 +8,12 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager Instance;
 
     public static float scoreCount;
-
+    private LevelGenerator _LevelGenerator;
     public TMP_Text scoreText;
     private void Awake()
     {
         Instance = this;
+        _LevelGenerator = LevelGenerator.Instance;
     }
     // Start is called before the first frame update
     void Start()
