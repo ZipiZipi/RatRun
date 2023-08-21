@@ -11,8 +11,11 @@ public class Hole : MonoBehaviour
         {
             Debug.Log(player.name +  " fell in hole.");
             this.GetComponentInParent<MeshCollider>().enabled = true;
+            SoundController.Instance.PlaySFX("Fall");
+
             player.GetComponent<Rigidbody>().useGravity = true;
             player.GetComponent<Animator>().enabled = false;
+            player.GetComponent<AudioSource>().enabled = false;
             LevelGenerator.IsAlive = false;
         }
     }

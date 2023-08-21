@@ -10,9 +10,12 @@ public class Obstacle : MonoBehaviour
         if (player.gameObject.layer == _playerLayer)
         {
             Debug.Log(player.name + " hit an obsticle!");
+            SoundController.Instance.PlaySFX("WallHit");
+
             player.transform.SetParent(this.transform.parent, true);
-            LevelGenerator.IsAlive = false;
+            player.GetComponent<AudioSource>().enabled = false;
             player.GetComponent<Animator>().enabled = false;
+            LevelGenerator.IsAlive = false;
         }
     }
     private void Awake()

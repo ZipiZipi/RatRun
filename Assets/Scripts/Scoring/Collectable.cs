@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Collectable : MonoBehaviour
 {
     public int value;
 
     private int _playerLayer;
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider player)
     {
-        if (other.gameObject.layer == _playerLayer)
+        if (player.gameObject.layer == _playerLayer)
         {
-            CollectableManager.Instance.IncreaseCoins(value);
+            EventManager.StartCoinPickupEvent(value);
+            //CollectableManager.Instance.IncreaseCoins(value);
             this.gameObject.SetActive(false);
         }
     }

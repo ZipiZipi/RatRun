@@ -6,9 +6,7 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-
-    public Canvas gameCanvas;
-    public Canvas DugmeCanvas;
+    public GameObject DeathPanel;
     public TMP_Text Score;
     public TMP_Text Coins;
 
@@ -22,7 +20,6 @@ public class LevelGenerator : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        DugmeCanvas.enabled = false;
         IsAlive = true;
         gameSpeed = 4f;
     }
@@ -34,8 +31,7 @@ public class LevelGenerator : MonoBehaviour
     {
         if(!IsAlive)
         {
-            gameCanvas.enabled = false;
-            DugmeCanvas.enabled = true;
+            DeathPanel.SetActive(true);
             Score.text = "Distance: " + ScoreManager.scoreCount.ToString();
             Coins.text = "Distance: " + CollectableManager.coinCount.ToString();
         }
@@ -50,8 +46,8 @@ public class LevelGenerator : MonoBehaviour
     }
     void GeneratePipe()
     {
-                int rand = Random.Range(0, pipes.Count);
-                Instantiate(pipes[rand], new Vector3(0, 0, 41), Quaternion.Euler(new Vector3(Random.Range(0f, 360f), 90, -90)));
+        int rand = Random.Range(0, pipes.Count);
+        Instantiate(pipes[rand], new Vector3(0, 0, 41), Quaternion.Euler(new Vector3(Random.Range(0f, 360f), 90, -90)));
     }
     private void OnTriggerExit(Collider pipe)
     {

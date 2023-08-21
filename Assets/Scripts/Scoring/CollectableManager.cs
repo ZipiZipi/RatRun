@@ -11,6 +11,7 @@ public class CollectableManager : MonoBehaviour
     public static int coinCount;
 
     public TMP_Text coinText;
+
     private void Awake()
     {
         Instance = this;
@@ -18,12 +19,18 @@ public class CollectableManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        EventManager.CoinPickupEvent += IncreaseCoins;
         coinText.text = "Coins: " + coinCount.ToString();
     }
 
-    public void IncreaseCoins(int amount)
+    private void IncreaseCoins(int value)
     {
-        coinCount += amount;
+        SoundController.Instance.PlaySFX("CoinPickUp");
+        coinCount += value;
         coinText.text = "Coins: " + coinCount.ToString();
+    }
+    private void OnDisable()
+    {
+        EventManager.CoinPickupEvent -= IncreaseCoins;
     }
 }
