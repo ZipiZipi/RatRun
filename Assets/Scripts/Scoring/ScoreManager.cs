@@ -17,7 +17,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         scoreCount = 0;
-        scoreText.text = "Distance: " + scoreCount.ToString();
+        scoreText.text = "Distance: " + scoreCount.ToString() + "cm";
         StartCoroutine(DistanceCounter());
     }
 
@@ -26,9 +26,9 @@ public class ScoreManager : MonoBehaviour
     {
         while (LevelGenerator.IsAlive)
         {
-            scoreCount += LevelGenerator.gameSpeed;
-            scoreText.text = "Distance: " + scoreCount.ToString();
-            yield return new WaitForSeconds(0.1f);
+            scoreCount += LevelGenerator.gameSpeed*0.1f;
+            scoreText.text = "Distance: " + scoreCount.ToString("F0") + "cm";
+            yield return new WaitForFixedUpdate();
         }
     }
 }

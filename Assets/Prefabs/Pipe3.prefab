@@ -27,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381984707243112611}
-  m_LocalRotation: {x: 0.6551896, y: -0.26594403, z: 0.26594433, w: 0.6551901}
-  m_LocalPosition: {x: 1.167, y: 2.406001, z: -0.97099996}
+  m_LocalRotation: {x: 0.7032516, y: -0.008859636, z: -0.0011178426, w: 0.71088505}
+  m_LocalPosition: {x: 0.026, y: 0.601, z: -1.479}
   m_LocalScale: {x: 0.385095, y: 0.231057, z: 0.385095}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 847351255815730774}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 44.185}
+  m_LocalEulerAnglesHint: {x: 88.982, y: -52.895, z: -52.268}
 --- !u!33 &6522712810047981697
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: -8026182071904330844}
   - component: {fileID: 7234318779331205768}
   m_Layer: 7
-  m_Name: Pipe
+  m_Name: Pipe3
   m_TagString: Pipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2549,14 +2549,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061936806614088166}
-  m_LocalRotation: {x: 0.58789694, y: 0.39005962, z: -0.3882657, w: 0.5928579}
-  m_LocalPosition: {x: 1.04, y: 1.92, z: 1.08}
-  m_LocalScale: {x: 1.5186504, y: 0.7925877, z: 0.24822}
+  m_LocalRotation: {x: 0.7053079, y: 0.01761056, z: -0.013452788, w: 0.7085547}
+  m_LocalPosition: {x: 0.047, y: 0.781, z: 1.391}
+  m_LocalScale: {x: 1.8716366, y: 0.785832, z: 0.24822}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 847351255815730774}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 89.573, y: 53.272, z: -13.511}
+  m_LocalEulerAnglesHint: {x: 89.573, y: 53.273, z: 50.755}
 --- !u!33 &707628203111408543
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -32,16 +32,16 @@ public class LevelGenerator : MonoBehaviour
         if(!IsAlive)
         {
             DeathPanel.SetActive(true);
-            Score.text = "Distance: " + ScoreManager.scoreCount.ToString();
-            Coins.text = "Distance: " + CollectableManager.coinCount.ToString();
+            Score.text = "Distance: " + ScoreManager.scoreCount.ToString("F2");
+            Coins.text = "Total coins: " + CollectableManager.coinCount.ToString();
         }
     }
     IEnumerator GameSpeedUpdate()
     {
         while (IsAlive)
         {
-            yield return new WaitForSeconds(5);
-            gameSpeed += 0.5f;
+            yield return new WaitForSeconds(4);
+            gameSpeed += 0.25f;
         }
     }
     void GeneratePipe()
