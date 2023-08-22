@@ -5,10 +5,17 @@ using UnityEngine;
 
 public class Pipe : MonoBehaviour
 {
+    Transform _transform;
     private InputManager _InputManager;
+
     private float _moveSpeed;
     private float step;
+
     Vector3 endPoint = new(0, 0, -14);
+    private void Awake()
+    {
+        _transform = GetComponent<Transform>();
+    }
     void Start()
     {
         _moveSpeed = LevelGenerator.gameSpeed;
@@ -21,12 +28,13 @@ public class Pipe : MonoBehaviour
         if (LevelGenerator.IsAlive)
         {
             _moveSpeed = LevelGenerator.gameSpeed;
-            transform.Rotate(0, _InputManager.Joystick.Horizontal * (_moveSpeed*0.4f), 0);
+            _transform.Rotate(0, _InputManager.Joystick.Horizontal * (_moveSpeed*0.4f), 0);
+
             step = Time.fixedDeltaTime * _moveSpeed;
-            transform.position = Vector3.MoveTowards(transform.position, endPoint, step);
+            _transform.position = Vector3.MoveTowards(_transform.position, endPoint, step);
             //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - _moveSpeed * Time.deltaTime);
         }
-        if (gameObject.transform.position.z <= -14)
+        if (_transform.position.z <= -14)
         {
             Destroy(gameObject);
         }

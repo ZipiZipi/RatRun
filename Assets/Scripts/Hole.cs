@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hole : MonoBehaviour
 {
-    private int _playerLayer;
+    /*private int _playerLayer;
     private void OnTriggerEnter(Collider player)
     {
         if(player.gameObject.layer == _playerLayer)
@@ -22,5 +22,5 @@ public class Hole : MonoBehaviour
     private void Awake()
     {
         _playerLayer = LayerMask.NameToLayer("Player");
-    }
+    }*/
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    private int _playerLayer;
+    /*private int _playerLayer;
     private void OnTriggerEnter(Collider player)
     {
         if (player.gameObject.layer == _playerLayer)
@@ -21,5 +21,5 @@ public class Obstacle : MonoBehaviour
     private void Awake()
     {
         _playerLayer = LayerMask.NameToLayer("Player");
-    }
+    }*/
 }
