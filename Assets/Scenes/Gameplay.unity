@@ -207,6 +207,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 707628203111408543, guid: 6784d3cb9d9b0064d959fa4b45e89e11,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1001935049}
     - target: {fileID: 847351255815730774, guid: 6784d3cb9d9b0064d959fa4b45e89e11,
         type: 3}
       propertyPath: m_RootOrder
@@ -271,6 +276,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699207646897694235, guid: 6784d3cb9d9b0064d959fa4b45e89e11,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1001935049}
+    - target: {fileID: 4341827753879983613, guid: 6784d3cb9d9b0064d959fa4b45e89e11,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1001935049}
+    - target: {fileID: 4341827753879983613, guid: 6784d3cb9d9b0064d959fa4b45e89e11,
+        type: 3}
+      propertyPath: m_VersionIndex
+      value: 273
       objectReference: {fileID: 0}
     - target: {fileID: 5796937614293751895, guid: 6784d3cb9d9b0064d959fa4b45e89e11,
         type: 3}
@@ -1602,8 +1622,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 1, g: 0.8427182, b: 0.5424528, a: 1}
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1642,7 +1662,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -3107,6 +3127,171 @@ Transform:
   m_Father: {fileID: 1318089911}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!43 &1001935049
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: pb_Mesh-4277980
+  serializedVersion: 11
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 36
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 24
+    localAABB:
+      m_Center: {x: 0.44680947, y: -0.00000017881393, z: 0.0000009834766}
+      m_Extent: {x: 0.9468095, y: 0.5000002, z: 0.49999902}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 000001000200000002000300040005000600040006000700080009000a0008000a000b000c000d000e000c000e000f00100011001200100012001300140015001600140016001700
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 24
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 40
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 1152
+    _typelessdata: 0000003f000000bf0000003f00000000000000000000803f000080bf0000000000000000000080bf00000000000000000000003f0000003f0000003f00000000000000000000803f000080bf0000000000000000000080bf000000000000803f000000bf0000003f0000003f00000000000000000000803f000080bf0000000000000000000080bf0000803f0000803f000000bf000000bf0000003f00000000000000000000803f000080bf0000000000000000000080bf0000803f000000000000003f0000003f0000003f040080b30000803f303139b4000080bf010080b301000034000080bf00000000000000001b62b23ffeffff3eadffffbe040000b40000803f3c6232b4000080bf010000b401008034000080bf000000000000803f6f88c93efaffff3ea3ffffbe040080b30000803f303139b4000080bf010080b301000034000080bf0000803f0000803f000000bf0000003f0000003f000000000000803f230040b4000080bf0000000000000000000080bf0000803f000000001b62b23ffeffff3eadffffbe0200a0b4feff0735000080bf000080bf020080b30100a034000080bf00000000000000001a62b23f040000bfbeffffbe0200a0b4feff0735000080bf000080bffeff871e0200a034000080bf000000000000803f7088c93e060000bfb4ffffbe0200a0b4feff0735000080bf000080bf020080b30100a034000080bf0000803f0000803f6f88c93efaffff3ea3ffffbe0300a0b4ffff0735000080bf000080bf010000b40100a034000080bf0000803f000000001a62b23f040000bfbeffffbe0c008033000080bfa498bc34000080bf050080b301002034000080bf00000000000000000000003f000000bf0000003f00000000000080bf11008034000080bf0000000000000000000080bf000000000000803f000000bf000000bf0000003f0c008033000080bfa498bc34000080bf050080b301002034000080bf0000803f0000803f7088c93e060000bfb4ffffbe0c000034000080bf3831f934000080bf020000b40300a034000080bf0000803f00000000000000bf000000bf0000003f37e33ebfc5942a34c9942abfc9942a3fc2bf56b436e33ebf000080bf0000000000000000000000bf0000003f0000003f36e33ebf00000000ca942abfca942a3f822a0fb436e33ebf000080bf000000000000803f6f88c93efaffff3ea3ffffbe37e33ebfc5942a34c9942abfc9942a3fc2bf56b436e33ebf000080bf0000803f0000803f7088c93e060000bfb4ffffbe38e33ebfc594aa34c8942abfc7942a3f802a8fb438e33ebf000080bf0000803f000000001a62b23f040000bfbeffffbe3ae33e3fdff664b4c6942a3fc6942abf56e3be333ae33e3f000080bf00000000000000001b62b23ffeffff3eadffffbe37e33e3fdff6e4b4c8942a3fc9942abfe0f6e42837e33e3f000080bf000000000000803f0000003f0000003f0000003f3ae33e3fdff664b4c6942a3fc6942abf56e3be333ae33e3f000080bf0000803f0000803f0000003f000000bf0000003f3ce33e3f00000000c4942a3fc4942abf55e33e343ce33e3f000080bf0000803f00000000
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0.44680947, y: -0.00000017881393, z: 0.0000009834766}
+    m_Extent: {x: 0.9468095, y: 0.5000002, z: 0.49999902}
+  m_MeshUsageFlags: 0
+  m_CookingOptions: 30
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1.3411005
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &1036823953
 GameObject:
   m_ObjectHideFlags: 0
@@ -6056,7 +6241,7 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 370ed4b9f01610c499e4d35c9e4be540, type: 3}
   sfxSounds:
   - Name: CoinPickUp
-    Clip: {fileID: 8300000, guid: 6756cd7dea9093f4aaa98d4919b64af8, type: 3}
+    Clip: {fileID: 8300000, guid: 8091e3bb65723374ab3cf64e433310e3, type: 3}
   - Name: Fall
     Clip: {fileID: 8300000, guid: 9dc681971af8b2148afc3483e0dc116c, type: 3}
   - Name: WallHit
