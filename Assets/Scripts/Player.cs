@@ -34,25 +34,26 @@ public class Player : MonoBehaviour
             Debug.Log(Instance.name + " fell in hole.");
             other.GetComponentInParent<MeshCollider>().enabled = true;
 
-            SoundController.Instance.PlaySFX("Fall");
+            EventManager.StartSFXEvent("Fall");
+            //SoundController.Instance.PlaySFX("Fall");
             _capsuleCollider.isTrigger = false;
             _rigidbody.useGravity = true;
             _audioSource.enabled = false;
             _animator.enabled = false;
-
-            LevelGenerator.IsAlive = false;
+            EventManager.StartDeathEvent();
+            //LevelGenerator.IsAlive = false;
         }
         else if (other.CompareTag("Obstacle"))
         {
             Debug.Log(Instance.name + " hit an obstacle.");
-
-            SoundController.Instance.PlaySFX("WallHit");
+            EventManager.StartSFXEvent("WallHit");
+            //SoundController.Instance.PlaySFX("WallHit");
 
             this.transform.SetParent(other.transform.parent, true);
             _audioSource.enabled = false;
             _animator.enabled = false;
-
-            LevelGenerator.IsAlive = false;
+            EventManager.StartDeathEvent();
+            //LevelGenerator.IsAlive = false;
         }
     }
 }

@@ -7,7 +7,7 @@ public class Pipe : MonoBehaviour
 {
     Transform _transform;
     private InputManager _InputManager;
-
+    private bool IsAlive;
     private float _moveSpeed;
     private float step;
 
@@ -18,6 +18,8 @@ public class Pipe : MonoBehaviour
     }
     void Start()
     {
+        IsAlive = true;
+        EventManager.DeathEvent += PlayerDeath;
         _moveSpeed = LevelGenerator.gameSpeed;
         _InputManager = InputManager.Instance;
     }
@@ -25,18 +27,25 @@ public class Pipe : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (LevelGenerator.IsAlive)
+        if (IsAlive)
         {
             _moveSpeed = LevelGenerator.gameSpeed;
             _transform.Rotate(0, _InputManager.Joystick.Horizontal * (_moveSpeed*0.4f), 0);
 
             step = Time.fixedDeltaTime * _moveSpeed;
             _transform.position = Vector3.MoveTowards(_transform.position, endPoint, step);
-            //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - _moveSpeed * Time.deltaTime);
         }
         if (_transform.position.z <= -14)
         {
             Destroy(gameObject);
         }
+    }
+    private void PlayerDeath()
+    {
+        IsAlive = false;
+    }
+    private void OnDisable()
+    {
+        EventManager.DeathEvent -= PlayerDeath;
     }
 }

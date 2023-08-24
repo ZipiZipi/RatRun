@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
+
     public GameObject DeathPanel;
     public TMP_Text Score;
     public TMP_Text Coins;
@@ -16,25 +17,17 @@ public class LevelGenerator : MonoBehaviour
     public List<GameObject> pipes = new();
 
     public static float gameSpeed;
-    // Start is called before the first frame update
+
     private void Awake()
     {
         Instance = this;
-        IsAlive = true;
-        gameSpeed = 4f;
+        gameSpeed = 5f;
     }
     void Start()
     {
+        IsAlive = true;
+        EventManager.DeathEvent += PlayerDeath;
         StartCoroutine(GameSpeedUpdate());
-    }
-    private void Update()
-    {
-        if(!IsAlive)
-        {
-            DeathPanel.SetActive(true);
-            Score.text = "Distance: " + ScoreManager.scoreCount.ToString("F2");
-            Coins.text = "Total coins: " + CollectableManager.coinCount.ToString();
-        }
     }
     IEnumerator GameSpeedUpdate()
     {
@@ -57,5 +50,16 @@ public class LevelGenerator : MonoBehaviour
             pipe.gameObject.GetComponent<BoxCollider>().enabled = false;
             pipe.gameObject.GetComponent<MeshCollider>().enabled = false;
         }
+    }
+    private void OnDisable()
+    {
+        EventManager.DeathEvent -= PlayerDeath;
+    }
+    private void PlayerDeath()
+    {
+        IsAlive = false;
+        DeathPanel.SetActive(true);
+        Score.text = "Distance: " + ScoreManager.scoreCount.ToString("F0") + "cm";
+        Coins.text = "Total coins: " + CollectableManager.coinCount.ToString();
     }
 }

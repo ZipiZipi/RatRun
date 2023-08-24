@@ -23,6 +23,7 @@ public class SoundController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        EventManager.SFXEvent += PlaySFX;
     }
     private void Start()
     {
@@ -52,5 +53,9 @@ public class SoundController : MonoBehaviour
         {
             sfxSource.PlayOneShot(s.Clip);
         }
+    }
+    private void OnDisable()
+    {
+        EventManager.SFXEvent -= PlaySFX;
     }
 }

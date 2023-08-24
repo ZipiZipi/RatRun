@@ -1,0 +1,258 @@
+fileFormatVersion: 2
+guid: c0edbbfa664dc9e42b93f89c59eaccae
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ratgif_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 395
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e6320f534ea4b4d94131ce7a49dc50
+      internalID: 1278569270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ratgif_1
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 0
+        width: 394
+        height: 152
+      alignment: 9
+      pivot: {x: 0.5385802, y: 0.49999976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b262701ed4ac1e247af3791659089cce
+      internalID: -286475988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ratgif_2
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 0
+        width: 400
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29deb860144fda4598c7fc881eba061
+      internalID: -1560749811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ratgif_3
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 0
+        width: 400
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e174c4318c6af147b490f355fb47c7b
+      internalID: 851894750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: eb7f8774bb182414ab10d7dca765c8a3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ezgif.com-gif-maker_0: -1657304406
+      ezgif.com-gif-maker_1: -1220192639
+      ezgif.com-gif-maker_10: 1467245539
+      ezgif.com-gif-maker_11: -1612407610
+      ezgif.com-gif-maker_12: 1487850089
+      ezgif.com-gif-maker_13: -2062685590
+      ezgif.com-gif-maker_14: 1984955061
+      ezgif.com-gif-maker_15: 1288510609
+      ezgif.com-gif-maker_16: -1452325993
+      ezgif.com-gif-maker_17: 70143784
+      ezgif.com-gif-maker_18: 528906651
+      ezgif.com-gif-maker_19: -1831273658
+      ezgif.com-gif-maker_2: 1780031462
+      ezgif.com-gif-maker_20: 224872642
+      ezgif.com-gif-maker_21: -2094948204
+      ezgif.com-gif-maker_22: -296386250
+      ezgif.com-gif-maker_23: 2129390911
+      ezgif.com-gif-maker_24: 785702403
+      ezgif.com-gif-maker_25: -1817942899
+      ezgif.com-gif-maker_26: 1598208882
+      ezgif.com-gif-maker_27: -166178419
+      ezgif.com-gif-maker_28: -34879651
+      ezgif.com-gif-maker_29: 778909830
+      ezgif.com-gif-maker_3: 856364363
+      ezgif.com-gif-maker_4: 796443246
+      ezgif.com-gif-maker_5: 1050981550
+      ezgif.com-gif-maker_6: -1627384966
+      ezgif.com-gif-maker_7: 1978506585
+      ezgif.com-gif-maker_8: -199246394
+      ezgif.com-gif-maker_9: 7039616
+      ratgif_0: 1278569270
+      ratgif_1: -286475988
+      ratgif_2: -1560749811
+      ratgif_3: 851894750
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
