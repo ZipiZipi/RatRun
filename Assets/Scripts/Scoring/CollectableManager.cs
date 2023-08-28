@@ -21,7 +21,7 @@ public class CollectableManager : MonoBehaviour
     {
         EventManager.CoinPickupEvent += IncreaseCoins;
         coinCount = 0;
-        coinText.text = "Coins: " + coinCount.ToString();
+        coinText.text = "Cash: " + coinCount.ToString();
     }
 
     private void IncreaseCoins(int value)
@@ -29,7 +29,7 @@ public class CollectableManager : MonoBehaviour
         EventManager.StartSFXEvent("CoinPickUp");
         //SoundController.Instance.PlaySFX("CoinPickUp");
         coinCount += value;
-        coinText.text = "Coins: " + coinCount.ToString();
+        coinText.text = "Cash: " + coinCount.ToString();
     }
     private void OnDisable()
     {

@@ -28,7 +28,7 @@ public class ScoreManager : MonoBehaviour
     {
         while (IsAlive)
         {
-            scoreCount += LevelGenerator.gameSpeed*0.1f;
+            scoreCount += LevelGenerator.gameSpeed*0.08f;
             scoreText.text = "Distance: " + scoreCount.ToString("F0") + "cm";
             yield return new WaitForFixedUpdate();
         }

@@ -30,7 +30,7 @@ public class Pipe : MonoBehaviour
         if (IsAlive)
         {
             _moveSpeed = LevelGenerator.gameSpeed;
-            _transform.Rotate(0, _InputManager.Joystick.Horizontal * (_moveSpeed*0.4f), 0);
+            _transform.Rotate(0, _InputManager.Joystick.Horizontal * (_moveSpeed*0.45f), 0);
 
             step = Time.fixedDeltaTime * _moveSpeed;
             _transform.position = Vector3.MoveTowards(_transform.position, endPoint, step);

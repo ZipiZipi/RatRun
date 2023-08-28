@@ -60,6 +60,6 @@ public class LevelGenerator : MonoBehaviour
         IsAlive = false;
         DeathPanel.SetActive(true);
         Score.text = "Distance: " + ScoreManager.scoreCount.ToString("F0") + "cm";
-        Coins.text = "Total coins: " + CollectableManager.coinCount.ToString();
+        Coins.text = "Cash collected: " + CollectableManager.coinCount.ToString();
     }
 }
