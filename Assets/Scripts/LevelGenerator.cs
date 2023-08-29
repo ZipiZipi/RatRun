@@ -13,8 +13,7 @@ public class LevelGenerator : MonoBehaviour
 
     public static LevelGenerator Instance;
     public static bool IsAlive;
-
-    public List<GameObject> pipes = new();
+    public GameObject[] pipes;
 
     public static float gameSpeed;
 
@@ -39,8 +38,8 @@ public class LevelGenerator : MonoBehaviour
     }
     void GeneratePipe()
     {
-        int rand = Random.Range(0, pipes.Count);
-        Instantiate(pipes[rand], new Vector3(0, 0, 41), Quaternion.Euler(new Vector3(Random.Range(0f, 360f), 90, -90)));
+        int rand = Random.Range(0, pipes.Length);
+        Instantiate(pipes[rand], new Vector3(0, 0, 37.3f), Quaternion.Euler(new Vector3(0, 0, Random.Range(0f, 360f))));
     }
     private void OnTriggerExit(Collider pipe)
     {
