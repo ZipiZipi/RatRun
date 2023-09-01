@@ -9,6 +9,9 @@ TagManager:
   - Obstacle
   - Hole
   - Coin
+  - Star
+  - Heart
+  - Point
   layers:
   - Default
   - TransparentFX

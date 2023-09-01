@@ -6,9 +6,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public float Highscore;
-    public float LastRun;
-    public int Cash;
+
+    public float Highscore2;
+    public float LastRun2;
+    public int Cash2;
 
     private void Awake()
     {
@@ -22,30 +23,30 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         EventManager.DeathEvent += UpdateScore;
-        Highscore = PlayerPrefs.GetFloat("Highscore", 0);
-        LastRun = PlayerPrefs.GetFloat("LastRun", 0);
-        Cash = PlayerPrefs.GetInt("Cash", 0);
+        Highscore2 = PlayerPrefs.GetFloat("Highscore", 0);
+        LastRun2 = PlayerPrefs.GetFloat("LastRun", 0);
+        Cash2 = PlayerPrefs.GetInt("Cash", 0);
     }
     public void UpdateScore()
     {
         float lastRun = ScoreManager.scoreCount;
-        if(Highscore < lastRun)
+        if(Highscore2 < lastRun)
         {
-            Highscore = lastRun;
-            LastRun = lastRun;
+            Highscore2 = lastRun;
+            LastRun2 = lastRun;
         }
         else
         {
-            LastRun = lastRun;
+            LastRun2 = lastRun;
         }
-        Cash += CollectableManager.coinCount;
+        Cash2 += CollectableManager.coinCount;
         SaveData();
     }
     public void SaveData()
     {
-        PlayerPrefs.SetFloat("Highscore", Highscore);
-        PlayerPrefs.SetFloat("LastRun", LastRun);
-        PlayerPrefs.SetInt("Cash", Cash);
+        PlayerPrefs.SetFloat("Highscore", Highscore2);
+        PlayerPrefs.SetFloat("LastRun", LastRun2);
+        PlayerPrefs.SetInt("Cash", Cash2);
     }
     private void OnDisable()
     {
