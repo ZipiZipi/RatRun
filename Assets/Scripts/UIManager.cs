@@ -13,8 +13,8 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         _gameManager = GameManager.Instance;
-        highscoreText.text = "Longest distance:\n" + _gameManager.Highscore2.ToString("F0") + "cm";
-        lastRunText.text = "Last run:\n" + _gameManager.LastRun2.ToString("F0") + "cm";
-        cashText.text = "Cash:\n" + "$" + _gameManager.Cash2.ToString();
+        highscoreText.text = "Longest distance:\n" + _gameManager.Highscore.ToString("F0") + "cm";
+        lastRunText.text = "Last run:\n" + _gameManager.LastRun.ToString("F0") + "cm";
+        cashText.text = "Cash:\n" + "$" + _gameManager.Cash.ToString();
     }
 }

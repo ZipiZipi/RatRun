@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public float Highscore2;
-    public float LastRun2;
-    public int Cash2;
+    public float Highscore;
+    public float LastRun;
+    public int Cash;
 
     private void Awake()
     {
@@ -23,30 +23,30 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         EventManager.DeathEvent += UpdateScore;
-        Highscore2 = PlayerPrefs.GetFloat("Highscore", 0);
-        LastRun2 = PlayerPrefs.GetFloat("LastRun", 0);
-        Cash2 = PlayerPrefs.GetInt("Cash", 0);
+        Highscore = PlayerPrefs.GetFloat("Highscore2", 0);
+        LastRun = PlayerPrefs.GetFloat("LastRun2", 0);
+        Cash = PlayerPrefs.GetInt("Cash2", 0);
     }
     public void UpdateScore()
     {
         float lastRun = ScoreManager.scoreCount;
-        if(Highscore2 < lastRun)
+        if(Highscore < lastRun)
         {
-            Highscore2 = lastRun;
-            LastRun2 = lastRun;
+            Highscore = lastRun;
+            LastRun = lastRun;
         }
         else
         {
-            LastRun2 = lastRun;
+            LastRun = lastRun;
         }
-        Cash2 += CollectableManager.coinCount;
+        Cash += CollectableManager.coinCount;
         SaveData();
     }
     public void SaveData()
     {
-        PlayerPrefs.SetFloat("Highscore", Highscore2);
-        PlayerPrefs.SetFloat("LastRun", LastRun2);
-        PlayerPrefs.SetInt("Cash", Cash2);
+        PlayerPrefs.SetFloat("Highscore2", Highscore);
+        PlayerPrefs.SetFloat("LastRun2", LastRun);
+        PlayerPrefs.SetInt("Cash2", Cash);
     }
     private void OnDisable()
     {

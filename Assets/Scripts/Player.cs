@@ -18,11 +18,9 @@ public class Player : MonoBehaviour
     public int Health;
     public TMP_Text healthText;
 
-    private bool Protected;
     private void Awake()
     {
         Instance = this;
-        Health = 2;
         _transform = transform;
         _rigidbody = GetComponent<Rigidbody>();
         _audioSource = GetComponent<AudioSource>();
@@ -31,6 +29,7 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
+        Health = 2;
         healthText.text = "Health: " + Health.ToString();
     }
 
@@ -67,7 +66,7 @@ public class Player : MonoBehaviour
             }
             else if(Health == 1)
             {
-                Health = 0;
+                Health -= 1;
                 healthText.text = "Health: " + Health.ToString();
 
                 this.transform.SetParent(other.transform.parent, true);
@@ -81,7 +80,8 @@ public class Player : MonoBehaviour
             {
                 EventManager.StartCoinPickupEvent(20);
                 other.gameObject.SetActive(false);
-            }else if(Health <= 2)
+            }
+            else if(Health <= 2)
             {
                 EventManager.StartSFXEvent("Heart");
                 Health += 1;
@@ -99,10 +99,20 @@ public class Player : MonoBehaviour
     IEnumerator StarProtection()
     {
         _capsuleCollider.enabled = false;
-        _transform.DOMove(new Vector3(-0.05f, -0.5f, -0.5f), 0.5f);
-        yield return new WaitForSeconds(5f);
-        _transform.DOMove(new Vector3(-0.05f, -1.7f, -2f), 0.5f);
-        yield return new WaitForSeconds(1f);
+        _animator.enabled = false;
+        _transform.Find("Wings").gameObject.SetActive(true);
+        EventManager.StartSFXEvent("Wings");
+        _audioSource.enabled = false;
+
+        _transform.DOMove(new Vector3(-0.05f, -0.5f, -0.5f), 1, false);
+        yield return new WaitForSeconds(7);
+        _transform.DOMove(new Vector3(-0.05f, -1.7f, -2f), 1, false);
+        yield return new WaitForSeconds(1);
+
+
+        _transform.Find("Wings").gameObject.SetActive(false);
+        _audioSource.enabled = true;
+        _animator.enabled = true;
         _capsuleCollider.enabled = true;
     }
 
