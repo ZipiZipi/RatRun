@@ -27,7 +27,7 @@ public class LevelGenerator : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        gameSpeed = 5f;
+        gameSpeed = 6f;
     }
     void Start()
     {

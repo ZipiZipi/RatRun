@@ -13,11 +13,13 @@ public class PauseManager : MonoBehaviour
         pauseMenu.SetActive(true);
         pauseButton.SetActive(false);
         Time.timeScale = 0f;
+        Player.Instance.WalkSfx();
     }
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
         pauseButton.SetActive(true);
         Time.timeScale = 1f;
+        Player.Instance.WalkSfx();
     }
 }

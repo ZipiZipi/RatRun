@@ -303,6 +303,8 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 42543bf413468264692ace7f5295332f, type: 3}
   - Name: Wings
     Clip: {fileID: 8300000, guid: 9325c393567700c4fae8f40b3082fcb0, type: 3}
+  - Name: Star
+    Clip: {fileID: 8300000, guid: 7aff309f8dbcb174490ced2c1d634f6e, type: 3}
   musicSource: {fileID: 533523087}
   sfxSource: {fileID: 993921705}
 --- !u!4 &238372464

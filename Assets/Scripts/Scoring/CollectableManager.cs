@@ -16,7 +16,6 @@ public class CollectableManager : MonoBehaviour
     {
         Instance = this;
     }
-    // Start is called before the first frame update
     void Start()
     {
         EventManager.CoinPickupEvent += IncreaseCoins;
@@ -27,7 +26,6 @@ public class CollectableManager : MonoBehaviour
     private void IncreaseCoins(int value)
     {
         EventManager.StartSFXEvent("CoinPickUp");
-        //SoundController.Instance.PlaySFX("CoinPickUp");
         coinCount += value;
         coinText.text = "Cash: " + coinCount.ToString();
     }

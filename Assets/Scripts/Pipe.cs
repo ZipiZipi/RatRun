@@ -26,7 +26,6 @@ public class Pipe : MonoBehaviour
 
     void FixedUpdate()
     {
-
         if (IsAlive)
         {
             _moveSpeed = LevelGenerator.gameSpeed;
@@ -40,29 +39,6 @@ public class Pipe : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    /*public void StartMove()
-    {
-        StartCoroutine(Move());
-    }
-    IEnumerator Move()
-    {
-        if (IsAlive)
-        {
-            _moveSpeed = LevelGenerator.gameSpeed;
-            _transform.Rotate(0, 0, _InputManager.Joystick.Horizontal * (_moveSpeed * -0.4f));
-
-            step = Time.fixedDeltaTime * _moveSpeed;
-            _transform.position = Vector3.MoveTowards(_transform.position, endPoint, step);
-        }
-        if (_transform.position.z <= -14)
-        {
-            Destroy(gameObject);
-        }
-        while (IsAlive)
-        {
-           yield return null;
-        }
-    }*/
     private void PlayerDeath()
     {
         IsAlive = false;

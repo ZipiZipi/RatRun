@@ -17,18 +17,23 @@ public class Player : MonoBehaviour
 
     public int Health;
     public TMP_Text healthText;
-
+    public void WalkSfx()
+    {
+        _audioSource.enabled = !_audioSource.enabled;
+    }
     private void Awake()
     {
         Instance = this;
         _transform = transform;
         _rigidbody = GetComponent<Rigidbody>();
-        _audioSource = GetComponent<AudioSource>();
         _animator = GetComponent<Animator>();
         _capsuleCollider = GetComponent<CapsuleCollider>();
+        _audioSource = GetComponent<AudioSource>();
     }
     private void Start()
     {
+        Time.timeScale = 1f;
+        _audioSource.enabled = true;
         Health = 2;
         healthText.text = "Health: " + Health.ToString();
     }
@@ -59,6 +64,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log(Instance.name + " hit an obstacle.");
             EventManager.StartSFXEvent("WallHit");
+            EventManager.StartCameraShakeEvent();
             if (Health > 1)
             {
                 Health -= 1;
@@ -91,29 +97,28 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("Star"))
         {
-            EventManager.StartSFXEvent("Heart");
+            EventManager.StartSFXEvent("Star");
             other.gameObject.SetActive(false);
             StartCoroutine(StarProtection());
         }
     }
     IEnumerator StarProtection()
-    {
+    {   
         _capsuleCollider.enabled = false;
         _animator.enabled = false;
         _transform.Find("Wings").gameObject.SetActive(true);
         EventManager.StartSFXEvent("Wings");
         _audioSource.enabled = false;
 
-        _transform.DOMove(new Vector3(-0.05f, -0.5f, -0.5f), 1, false);
-        yield return new WaitForSeconds(7);
+        _transform.DOMove(new Vector3(-0.07f, -0.5f, -0.5f), 1, false);
+        yield return new WaitForSecondsRealtime(6);
         _transform.DOMove(new Vector3(-0.05f, -1.7f, -2f), 1, false);
-        yield return new WaitForSeconds(1);
-
+        yield return new WaitForSecondsRealtime(1);
 
         _transform.Find("Wings").gameObject.SetActive(false);
         _audioSource.enabled = true;
         _animator.enabled = true;
         _capsuleCollider.enabled = true;
-    }
+    }   
 
 }
