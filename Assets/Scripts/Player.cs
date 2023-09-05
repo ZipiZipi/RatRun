@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
+        //Application.targetFrameRate = 20;
         Time.timeScale = 1f;
         _audioSource.enabled = true;
         Health = 2;
@@ -99,26 +100,50 @@ public class Player : MonoBehaviour
         {
             EventManager.StartSFXEvent("Star");
             other.gameObject.SetActive(false);
-            StartCoroutine(StarProtection());
+            StarProtection();
         }
     }
-    IEnumerator StarProtection()
-    {   
+    /*void StarProtection()
+    {
         _capsuleCollider.enabled = false;
         _animator.enabled = false;
         _transform.Find("Wings").gameObject.SetActive(true);
         EventManager.StartSFXEvent("Wings");
         _audioSource.enabled = false;
 
-        _transform.DOMove(new Vector3(-0.07f, -0.5f, -0.5f), 1, false);
-        yield return new WaitForSecondsRealtime(6);
-        _transform.DOMove(new Vector3(-0.05f, -1.7f, -2f), 1, false);
-        yield return new WaitForSecondsRealtime(1);
+        DG.Tweening.Sequence mySequence = DOTween.Sequence();
+        mySequence.Append(_transform.DOMove(new Vector3(0, -0.5f, -0.5f), 1, false));
+        mySequence.AppendInterval(6);
+        mySequence.Append(_transform.DOMove(new Vector3(0, -1.7f, -2), 1, false));
+        mySequence.Play().OnComplete( () =>
+        {
+            _transform.Find("Wings").gameObject.SetActive(false);
+            _audioSource.enabled = true;
+            _animator.enabled = true;
+            _capsuleCollider.enabled = true;
+        });
+    }*/
+    void StarProtection()
+    {
+        _capsuleCollider.enabled = false;
+        _animator.enabled = false;
+        _transform.Find("Wings").gameObject.SetActive(true);
+        EventManager.StartSFXEvent("Wings");
+        _audioSource.enabled = false;
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            _transform.DOMove(new Vector3(0, -0.5f, -0.5f), 1, false);
+        }
+        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            _transform.DOMove(new Vector3(0, -1.7f, -2), 1, false);
+        }
 
         _transform.Find("Wings").gameObject.SetActive(false);
         _audioSource.enabled = true;
         _animator.enabled = true;
         _capsuleCollider.enabled = true;
-    }   
+    }
 
 }
